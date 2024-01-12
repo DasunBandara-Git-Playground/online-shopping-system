@@ -1,7 +1,7 @@
 package lk.ac.iit;
 
-public abstract class Product {
-    private String productID;
+public abstract class Product implements Comparable<Product>{
+    private String productID;  // P01
     private String productName;
     private int numberOfAvailableItems;
     private double price;
@@ -46,5 +46,10 @@ public abstract class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return Integer.parseInt(this.productID.substring(1)) - Integer.parseInt(o.productID.substring(1));
     }
 }

@@ -1,16 +1,20 @@
 package lk.ac.iit;
 
 import java.io.File;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public interface ShoppingManager {
 
-    void addANewProduct(String productID, String productName, int numberOfAvailableItems, double price, String brand, Date warrantyPeriod);
-    void addANewProduct(String productID, String productName, int numberOfAvailableItems, double price, double size, String colour);
+    boolean addANewProduct(String productID, String productName, int numberOfAvailableItems, double price, String brand, int warrantyPeriod);
 
-    void deleteAProduct(String productID);
+    boolean addANewProduct(String productID, String productName, int numberOfAvailableItems, double price, double size, String colour);
+
+    boolean deleteAProduct(String productID);
 
     void printTheListOfTheProduct();
 
-    void saveInAFile(File file);
+    boolean saveInAFile(File file);
+
 }

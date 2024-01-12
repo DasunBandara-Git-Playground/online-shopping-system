@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class Electronics extends Product{
     private String brand;
-    private Date warrantyPeriod;
+    private int warrantyPeriod;  // warranty period in month
 
-    public Electronics(String productID, String productName, int numberOfAvailableItems, double price, String brand, Date warrantyPeriod) {
+    public Electronics(String productID, String productName, int numberOfAvailableItems, double price, String brand, int warrantyPeriod) {
         super(productID, productName, numberOfAvailableItems, price);
         this.brand = brand;
         this.warrantyPeriod = warrantyPeriod;
@@ -16,7 +16,7 @@ public class Electronics extends Product{
         return brand;
     }
 
-    public Date getWarrantyPeriod() {
+    public int getWarrantyPeriod() {
         return warrantyPeriod;
     }
 
@@ -24,7 +24,7 @@ public class Electronics extends Product{
         this.brand = brand;
     }
 
-    public void setWarrantyPeriod(Date warrantyPeriod) {
+    public void setWarrantyPeriod(int warrantyPeriod) {
         this.warrantyPeriod = warrantyPeriod;
     }
 
