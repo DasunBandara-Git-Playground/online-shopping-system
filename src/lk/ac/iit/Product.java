@@ -1,6 +1,8 @@
 package lk.ac.iit;
 
-public abstract class Product implements Comparable<Product>{
+import java.io.Serializable;
+
+public abstract class Product implements Serializable, Comparable<Product>{
     private String productID;  // P01
     private String productName;
     private int numberOfAvailableItems;

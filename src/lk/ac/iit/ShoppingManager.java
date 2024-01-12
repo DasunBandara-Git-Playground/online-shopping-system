@@ -9,12 +9,12 @@ public interface ShoppingManager {
 
     boolean addANewProduct(String productID, String productName, int numberOfAvailableItems, double price, String brand, int warrantyPeriod);
 
-    boolean addANewProduct(String productID, String productName, int numberOfAvailableItems, double price, double size, String colour);
+    boolean addANewProduct(String productID, String productName, int numberOfAvailableItems, double price, String size, String colour);
 
     boolean deleteAProduct(String productID);
 
     void printTheListOfTheProduct();
 
-    boolean saveInAFile(File file);
+    boolean saveInAFile();
 
 }
